@@ -2,6 +2,12 @@
 
 A lightweight, event-driven utility for Windows that automatically routes downloaded files out of the Downloads folder into appropriate destinations (Pictures, Videos, Music, Documents, etc.).
 
+# Download Sorting Tool
+
+Designed to keep the Downloads folder empty by default by automatically routing downloaded files into appropriate user folders.
+
+&
+
 Designed to work correctly with modern browsers and OneDrive-redirected folders.
 
 ## What it does
@@ -28,6 +34,9 @@ Unmatched or manually placed files remain in Downloads.
 - Windows 10 / 11
 - Python 3.12+
 - Python package: `watchdog`
+
+- Tested on Python 3.12 (Windows). Other versions are untested.
+
 
 ## Install dependency:
 
@@ -74,3 +83,9 @@ PICTURES = Path.home() / "OneDrive" / "Pictures"
 
 
 Videos and Music are typically not redirected.
+
+## Design Notes
+
+- No GUI by design.
+- No external config files unless there is a clear demand.
+- Sorting rules are defined directly in code for transparency and simplicity.
